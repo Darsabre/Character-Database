@@ -1,0 +1,7 @@
+<h1>Serpent's Dream Character Database</h1>
+
+<%= form_tag '/login' do %>
+  player Name: <%= text_field_tag :player_name %>
+  Password: <%= password_field_tag :password %>
+  <%= submit_tag "Log in" %>
+<% end %>

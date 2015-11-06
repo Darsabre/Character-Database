@@ -1,0 +1,16 @@
+<h1>Stories in our Collection</h1>
+
+<ul>
+  <% @story.each do |story| %>
+  <li>
+    <div class="story">
+      <h3><%= " #{story.title}"%> </h3>
+      <h4><%=" by #{story.player.player_name}" %></h4>
+      <p><%= story.body %></p>
+      <% if story.player == current_player %>
+        <%= link_to "Edit Your story" , edit_story_path(id: story.id) %>
+      <% end %>
+    </div>
+  </li>
+  <% end %>
+</ul>

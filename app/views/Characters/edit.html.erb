@@ -1,0 +1,19 @@
+<%= form_for @character do |f| %>
+
+  Title: <%= f.text_field :title %>
+  Body:  <%= f.text_area  :body  %>
+
+  <%= f.submit "Edit" %>
+
+<% end %>
+
+<%= link_to "Delete this character", character_path, method: :delete, data: {confirm: "Really delete this character?"} %><%= form_for @character do |f| %>
+
+  Title: <%= f.text_field :title %>
+  Body:  <%= f.text_area  :body  %>
+
+  <%= f.submit "Edit" %>
+
+<% end %>
+
+<%= link_to "Delete this character", character_path, method: :delete, data: {confirm: "Really delete this character?"} %>
