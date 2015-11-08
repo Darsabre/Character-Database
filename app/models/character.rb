@@ -1,4 +1,4 @@
-class Character  < ActiveRecord::base
+class Character  < ActiveRecord::Base
   belongs_to :player
 
   validates :name, presence: true
@@ -26,7 +26,7 @@ class Character  < ActiveRecord::base
   validates :stealth, presence: true
   validates :survival, presence: true
   validates :weaponry, presence: true
-  validates :animal ken, presence: true
+  validates :animalken, presence: true
   validates :empathy, presence: true
   validates :expression, presence: true
   validates :intimidation, presence: true
@@ -34,6 +34,7 @@ class Character  < ActiveRecord::base
   validates :socialize, presence: true
   validates :streetwise, presence: true
   validates :subterfuge, presence: true
+
   validates :meritlist, presence: true
   validates :powerlist, presence: true
 

@@ -1,0 +1,10 @@
+
+<%= form_for @story, url: "/stories" do |f| %>
+
+  Title: <%= f.text_field :title %>
+  Body:  <%= f.text_area  :body  %>
+  Max # of players? <%= f.text_field :maxplayers %>
+
+  <%= f.submit "Start Telling Your Story" %>
+
+<% end %>

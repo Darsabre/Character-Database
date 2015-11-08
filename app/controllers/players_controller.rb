@@ -1,4 +1,4 @@
-class PlayersController <<ApplicationController
+class PlayersController < ApplicationController
 
     def index
       @players = Player.all
@@ -8,13 +8,13 @@ class PlayersController <<ApplicationController
       @player = Player.new
     end
 
-    def create
-      player = player.new(player_params)
-      if player.save
-        redirect_to '/characters'
-      else
-        redirect_to new_player_path
+    def show
+        @player = 'players/index'
       end
+
+    def create
+      @player = Player.new(player_params)
+      redirect_to '/players'
     end
 
     private

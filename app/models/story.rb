@@ -1,6 +1,6 @@
-class Story  < ActiveRecord::base
+class Story  < ActiveRecord::Base
   belongs_to :player
 
-   validates :title, presence: true
-   validates :body, presence: true
+   validates :name, presence: true
+   validates :description, presence: true
 end

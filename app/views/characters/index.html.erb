@@ -1,0 +1,16 @@
+<h1>characters</h1>
+
+<ul>
+  <% @characters.each do |character| %>
+  <li>
+    <div class="character">
+      <h3><%= " #{character.name}"%> </h3>
+      <h4><%=" by #{character.player.player_name}" %></h4>
+      <p><%= character.body %></p>
+      <% if character.player == current_player %>
+        <%= link_to "Edit Your character" , edit_character_path(id: character.id) %>
+      <% end %>
+    </div>
+  </li>
+  <% end %>
+</ul>

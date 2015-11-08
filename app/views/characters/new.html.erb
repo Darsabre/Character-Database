@@ -1,0 +1,76 @@
+<%= form_for @character, url: "/characters" do |f| %>
+Hey!   lets make a new character for you!
+first things first, lets name your character.  try to pick something that fits the story of how the character came into being.
+/<div class="name">
+  <%= f.text_field :name%>
+</div>
+  next, lets talk about the three categories of stats. there are mental, physical and social attributes.
+  each attribute starts at 1, because if you did not have these, your character wouldn't be able to interact with the world.
+  you will have to assign priority between the different categories, and assign 5 points to the first,
+  4 to the second, and 3 to the third.
+
+  mental traits represent your character's internal mental capabilities.
+  Intelligence represents brute mental capability.  Wits represents quick thinking and adaptability
+  while resolve indicates "guts" or other forms of stick-to-itiveness
+  <div class="mentalattributes">
+    intelligence<%= f.text_field :int%>
+    Wits<%= f.text_field :wits%>
+    resolve<%= f.text_field :res%>
+    </div>
+  <div class="physicalattributes">
+    strength<%= f.text_field :str%>
+    dexterity<%= f.text_field :dex%>
+    stamina<%= f.text_field :stam%>
+  </div>
+  <div class="socialattributes">
+    charisma<%= f.text_field :cha%>
+    manipulation<%= f.text_field :manip%>
+    composure<%= f.text_field :comp%>
+  </div>
+
+<div class="explanationtext">
+  Next let's assign skills.  skills are divided into the same three categories, mental, physical, and social.
+  just as above, you would divide up your points between the three categories, except this time you have more.
+  11 for the first, 7 for the second, 4 for the third.
+</div>
+  <div class="mentalskills">
+    Academics<%= f.text_field :academics%>
+    Computer<%= f.text_field :computer%>
+    Crafts<%= f.text_field :crafts%>
+    Investigation<%= f.text_field :investigation%>
+    Medicine<%= f.text_field :medicine%>
+    Occult<%= f.text_field :occult%>
+    Politics<%= f.text_field :politics%>
+    Science <%= f.text_field :science%>
+  </div>
+  <div class="physicalskills">
+    athletics<%= f.text_field :athletics%>
+    brawl<%= f.text_field :brawl%>
+    drive<%= f.text_field :drive%>
+    firearms<%= f.text_field :firearms%>
+    larceny<%= f.text_field :larceny%>
+    stealth<%= f.text_field :stealth%>
+    survival<%= f.text_field :survival%>
+    weaponry<%= f.text_field :weaponry%>
+  </div>
+<div class="socialskills">
+  animal ken<%= f.text_field :animalken%>
+  empathy<%= f.text_field :empathy%>
+  expression<%= f.text_field :expression%>
+  intimidation<%= f.text_field :intimidation%>
+  persuasion<%= f.text_field :persuasion%>
+  socialize<%= f.text_field :socialize%>
+  streetwise<%= f.text_field :streetwise%>
+  subterfuge<%= f.text_field :subterfuge%>
+</div>
+
+now, you have to choose seven levels of merits. consult your gamebooks to do that.
+  <%= f.text_field :meritlist%>
+please list any supernatural abilities, or morality traits your character has below.
+  <%= f.text_field :powerlist%>
+any experience you have earned should go here.
+  <%= f.text_field :experience%>
+
+  <%= f.submit "I'm DONE!" %>
+Congratulations!
+<% end %>

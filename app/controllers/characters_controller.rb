@@ -1,4 +1,4 @@
-class CharactersController <<ApplicationController
+class CharactersController < ApplicationController
 
     before_action :authorize, except: [:index]
 
@@ -6,6 +6,9 @@ class CharactersController <<ApplicationController
       @characters = Character.all
     end
 
+    def show
+        @character = 'characters/index'
+      end
 
     def new
       @character = Character.new
