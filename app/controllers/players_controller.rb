@@ -12,11 +12,14 @@ class PlayersController < ApplicationController
         @player = 'players/index'
       end
 
-    def create
-      @player = Player.new(player_params)
-      redirect_to '/players'
-    end
-
+      def create
+        player = Player.create(player_params)
+        if player.save
+          redirect_to '/players'
+        else
+          redirect_to '/players/new'
+        end
+      end
     private
 
     def player_params

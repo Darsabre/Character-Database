@@ -1,47 +1,52 @@
 <h1>characters</h1>
-
+<a href="/login">Login</a><a href="/logout">Log out</a>
 <ul>
   <% @characters.each do |character| %>
   <li>
     <div class="character">
       <h3><%= " #{character.name}"%> </h3>
       <h4><%=" by #{character.player.player_name}" %></h4>
-      <p><%= character.name%></p>
-      <p><%= character.intel%></p>
-      <p><%= character.wits%></p>
-      <p><%= character.res%></p>
-      <p><%= character.str%></p>
-      <p><%= character.dex%></p>
-      <p><%= character.stam%></p>
-      <p><%= character.cha%></p>
-      <p><%= character.manip%></p>
-      <p><%= character.academics%></p>
-      <p><%= character.computer%></p>
-      <p><%= character.crafts%></p>
-      <p><%= character.investigation%></p>
-      <p><%= character.medicine%></p>
-      <p><%= character.occult%></p>
-      <p><%= character.politics%></p>
-      <p><%= character.science%></p>
-      <p><%= character.athletics%></p>
-      <p><%= character.brawl%></p>
-      <p><%= character.drive%></p>
-      <p><%= character.firearms%></p>
-      <p><%= character.larceny%></p>
-      <p><%= character.stealth%></p>
-      <p><%= character.survival%></p>
-      <p><%= character.weaponry%></p>
-      <p><%= character.animalken%></p>
-      <p><%= character.empathy%></p>
-      <p><%= character.expression%></p>
-      <p><%= character.intimidation%></p>
-      <p><%= character.persuasion%></p>
-      <p><%= character.socialize%></p>
-      <p><%= character.streetwise%></p>
-      <p><%= character.subterfuge%></p>
-      <p><%= character.meritlist%></p>
-      <p><%= character.powerlist%></p>
-      <p><%= character.experience%></p>
+      Name <p><%= character.name%></p>
+      Intelligence<p><%= character.intel%> Wits <%= character.wits%>
+      Resolve <%= character.res%></p>
+      <p>Strength <%= character.str%>
+        Dexterity <%= character.dex%>
+      Stamina<%= character.stam%></p>
+      <p>Charisma<%= character.cha%>
+      Manipulation<%= character.manip%>
+      Composure<%= character.composure%></p>
+      Mental Skills
+      <p>Academics<%= character.academics%>
+      Computer<%= character.computer%>
+      Crafts<%= character.crafts%>
+      Investigation<%= character.investigation%>
+      Medicine<%= character.medicine%>
+      Occult<%= character.occult%>
+      Politics<%= character.politics%>
+      Science<%= character.science%></p>
+      Physical Skills
+      <p>Athletics<%= character.athletics%>
+      Brawl<%= character.brawl%>
+      Drive<%= character.drive%>
+      Firearms<%= character.firearms%>
+      Larceny<%= character.larceny%>
+      Stealth<%= character.stealth%>
+      Survival<%= character.survival%>
+      Weaponry<%= character.weaponry%></p>
+      Social Skills
+      Animal Ken<p><%= character.animalken%>
+      Empathy<p><%= character.empathy%>
+      Expression<p><%= character.expression%>
+      Intimidation<p><%= character.intimidation%>
+      Persuasion<p><%= character.persuasion%>
+      Socialize<p><%= character.socialize%>
+      Streetwize<p><%= character.streetwise%>
+      Subterfuge<p><%= character.subterfuge%>
+
+      Misc. Stats
+      Merits<p><%= character.meritlist%></p>
+      Powers and supernatural abilities<p><%= character.powerlist%></p>
+      XP<p><%= character.experience%></p>
 
       <% if character.player == current_player %>
         <%= link_to "Edit Your character" , edit_character_path(id: character.id) %>
