@@ -3,7 +3,7 @@ class CreateCharacters < ActiveRecord::Migration
       create_table :characters do |t|
         t.references :player, index: true, foreign_keys: true
         t.string :name
-        t.integer :int
+        t.integer :intel
         t.integer :wits
         t.integer :res
         t.integer :str

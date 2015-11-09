@@ -51,8 +51,43 @@ class CharactersController < ApplicationController
 
     def character_params
       params.require(:character).permit(
-        :title,
-        :body
-      )
+        :name,
+        :intel,
+        :wits,
+        :res,
+        :str,
+        :dex,
+        :stam,
+        :cha,
+        :manip,
+        :Comp,
+        :academics,
+        :computer,
+        :crafts,
+        :investigation,
+        :medicine,
+        :occult,
+        :politics,
+        :science,
+        :athletics,
+        :brawl,
+        :drive,
+        :firearms,
+        :larceny,
+        :stealth,
+        :survival,
+        :weaponry,
+        :animalken,
+        :empathy,
+        :expression,
+        :intimidation,
+        :persuasion,
+        :socialize,
+        :streetwise,
+        :subterfuge,
+       :meritlist,
+       :powerlist,
+       :experience,
+              )
     end
   end

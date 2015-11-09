@@ -13,15 +13,22 @@ first things first, lets name your character.  try to pick something that fits t
   Intelligence represents brute mental capability.  Wits represents quick thinking and adaptability
   while resolve indicates "guts" or other forms of stick-to-itiveness
   <div class="mentalattributes">
-    intelligence<%= f.text_field :int%>
+    intelligence<%= f.text_field :intel%>
     Wits<%= f.text_field :wits%>
     resolve<%= f.text_field :res%>
     </div>
+    next are the physical attributes, which represent your raw physical capability.
+    strength represents pure muscle.  dexterity represents both manual dexterity and overall quickness.
+    stamina represents how much punishment your body can take, either from exercise or taking a hit.
   <div class="physicalattributes">
     strength<%= f.text_field :str%>
     dexterity<%= f.text_field :dex%>
     stamina<%= f.text_field :stam%>
   </div>
+  finally comes the social attributes.
+  charisma represents your force of personality.
+  manipulation represents your cleverness and ability to trick others.
+  composure represents your ability to keep it together when faced with difficult social situations.
   <div class="socialattributes">
     charisma<%= f.text_field :cha%>
     manipulation<%= f.text_field :manip%>

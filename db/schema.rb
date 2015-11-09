@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20151105191036) do
   create_table "characters", force: :cascade do |t|
     t.integer  "player_id"
     t.string   "name"
-    t.integer  "int"
+    t.integer  "intel"
     t.integer  "wits"
     t.integer  "res"
     t.integer  "str"

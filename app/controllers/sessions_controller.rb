@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
       redirect_to "/login"
     end
   end
+  end
 
   def destroy
     session[:player_id] = nil

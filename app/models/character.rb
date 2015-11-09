@@ -2,7 +2,7 @@ class Character  < ActiveRecord::Base
   belongs_to :player
 
   validates :name, presence: true
-  validates :int, presence: true
+  validates :intel, presence: true
   validates :wits, presence: true
   validates :res, presence: true
   validates :str, presence: true

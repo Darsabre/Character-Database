@@ -1,16 +1,58 @@
 <%= form_for @character do |f| %>
+/<div class="name">
+  NAME <%= f.text_field :name%>
+</div>
+  <div class="mentalattributes">
+    intelligence<%= f.text_field :intel%>
+    Wits<%= f.text_field :wits%>
+    resolve<%= f.text_field :res%>
+    </div>
+  <div class="physicalattributes">
+    strength<%= f.text_field :str%>
+    dexterity<%= f.text_field :dex%>
+    stamina<%= f.text_field :stam%>
+  </div>
+  <div class="socialattributes">
+    charisma<%= f.text_field :cha%>
+    manipulation<%= f.text_field :manip%>
+    composure<%= f.text_field :comp%>
+  </div>
 
-  Title: <%= f.text_field :title %>
-  Body:  <%= f.text_area  :body  %>
-
-  <%= f.submit "Edit" %>
-
-<% end %>
-
-<%= link_to "Delete this character", character_path, method: :delete, data: {confirm: "Really delete this character?"} %><%= form_for @character do |f| %>
-
-  Title: <%= f.text_field :title %>
-  Body:  <%= f.text_area  :body  %>
+<div class="explanationtext">
+</div>
+  <div class="mentalskills">
+    Academics<%= f.text_field :academics%>
+    Computer<%= f.text_field :computer%>
+    Crafts<%= f.text_field :crafts%>
+    Investigation<%= f.text_field :investigation%>
+    Medicine<%= f.text_field :medicine%>
+    Occult<%= f.text_field :occult%>
+    Politics<%= f.text_field :politics%>
+    Science <%= f.text_field :science%>
+  </div>
+  <div class="physicalskills">
+    athletics<%= f.text_field :athletics%>
+    brawl<%= f.text_field :brawl%>
+    drive<%= f.text_field :drive%>
+    firearms<%= f.text_field :firearms%>
+    larceny<%= f.text_field :larceny%>
+    stealth<%= f.text_field :stealth%>
+    survival<%= f.text_field :survival%>
+    weaponry<%= f.text_field :weaponry%>
+  </div>
+<div class="socialskills">
+  animal ken<%= f.text_field :animalken%>
+  empathy<%= f.text_field :empathy%>
+  expression<%= f.text_field :expression%>
+  intimidation<%= f.text_field :intimidation%>
+  persuasion<%= f.text_field :persuasion%>
+  socialize<%= f.text_field :socialize%>
+  streetwise<%= f.text_field :streetwise%>
+  subterfuge<%= f.text_field :subterfuge%>
+</div>
+  <%= f.text_field :meritlist%>
+  <%= f.text_field :powerlist%>
+  <%= f.text_field :experience%>
 
   <%= f.submit "Edit" %>
 
