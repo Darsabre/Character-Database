@@ -16,7 +16,6 @@ Rails.application.routes.draw do
     resources :characters
     resources :players
     resources :stories
-    
     get '/login'  => 'sessions#new'
     post '/login' => 'sessions#create'
     get '/logout' => 'sessions#destroy'
